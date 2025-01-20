@@ -64,6 +64,7 @@ print(lista)  # ['Radek', 'Zenek', 'Zuza', 'Marek']
 # usunięcie po indeksie
 print(lista.pop(2))  # Zuza, usunie element i wypisze jaki usunęliśmy
 
+print(lista.pop())  # usunięcie ostatniego! elementu, Marek
 a = 1
 b = 3
 a = b
