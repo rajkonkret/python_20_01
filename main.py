@@ -22,3 +22,4 @@ if __name__ == '__main__':
 # Hi, PyCharm
 # ctrl / - komentowanie zaznaczonego tektstu
 # komentarz# ctrl alt l - dostosowanie kodu do zasad PEP8
+# snake_case
