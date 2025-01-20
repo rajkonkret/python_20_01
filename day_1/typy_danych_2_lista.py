@@ -52,16 +52,62 @@ print(lista)  # ['Radek', 'Zenek', 'Zuza', 'Marek']
 
 # dodanie elementu do listy we wskazanym indeksie
 lista.insert(1, "Tomek")
-print(lista) # ['Radek', 'Tomek', 'Zenek', 'Zuza', 'Marek']
+print(lista)  # ['Radek', 'Tomek', 'Zenek', 'Zuza', 'Marek']
 
 # odzczytanie indexu
-print(lista.index("Tomek")) # indeks 1
+print(lista.index("Tomek"))  # indeks 1
 
 # usunięcie elementu
 lista.remove("Tomek")
-print(lista) # ['Radek', 'Zenek', 'Zuza', 'Marek']
+print(lista)  # ['Radek', 'Zenek', 'Zuza', 'Marek']
 
 # usunięcie po indeksie
 print(lista.pop(2))  # Zuza, usunie element i wypisze jaki usunęliśmy
 
+a = 1
+b = 3
+a = b
+print(f"{a=}, {b=}")  # a=3, b=3
+b = 7
+print(f"{a=}, {b=}")  # a=3, b=7
 
+lista_2 = lista  # a = b, kopiuje referencję, kopia adresu pamieci
+print(lista)  # ['Radek', 'Zenek', 'Marek']
+print(lista_2)  # ['Radek', 'Zenek', 'Marek']
+lista_copy = lista.copy()
+lista.clear()  # usunie z listy wszystkie elementy
+print(lista)  # []
+print(lista_2)  # []
+print(lista_copy)  # ['Radek', 'Zenek', 'Marek']
+
+print(id(lista))  # 2383641448832
+print(id(lista_2))  # 2383641448832
+print(id(lista_copy))  # 2383641748672
+
+liczby = [54, 999, 34, 22, 12.34, 687]
+print(liczby)  # [54, 999, 34, 22, 12.34, 687]
+print(type(liczby))  # <class 'list'>
+
+liczby.sort()
+print(liczby)  # [12.34, 22, 34, 54, 687, 999]
+
+liczby = [54, 999, 34, 22, 12.34, 687, "A"]
+# liczby.sort() # TypeError: '<' not supported between instances of 'str' and 'int'
+
+liczby[3] = 666
+print(liczby[0:3])
+print(liczby[-2])
+
+del liczby  # usunięcie listy z pamięci
+# print(liczby) # NameError: name 'liczby' is not defined
+
+tekst = 'Pyth on.'
+lista1 = list(tekst)
+print(lista1)  # ['P', 'y', 't', 'h', ' ', 'o', 'n', '.']
+
+lista2 = [tekst]
+print(lista2)  # ['Pyth on.']
+
+krotka = tuple(lista_copy)
+print(krotka)  # ('Radek', 'Zenek', 'Marek')
+print(type(krotka))  # <class 'tuple'>
