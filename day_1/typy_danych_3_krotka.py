@@ -32,7 +32,7 @@ print(tupla1.count("Anna"))  # występuje 1 raz
 
 tup = 1, 2
 a, b = 1, 2
-a, b = tup
+a, b = tup  # rozpakowanie krotki
 print(a, b)  # 1 2
 tup_2 = 1, 2, 3
 a, *b = tup_2  # * worek na pozostałe
