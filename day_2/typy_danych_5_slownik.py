@@ -41,5 +41,26 @@ dict_small.update([('y', 3), ('z', 5)])
 print(dict_small)  # {'x': 2, 'y': 3, 'z': 5}
 
 # input() - pobiera dane np.: od użytkownika
-tekst = input("Podaj imię")
-print(tekst)
+# tekst = input("Podaj imię")
+# print(tekst)
+
+# napisac aplikacje kalkulator
+# pobrac dwie liczby -> 2 x input
+# wyswietlic wynik działania (+) -> print
+# a = int(input("Podaj pierwszą liczbę"))  # zwraca str
+# b = input("Podaj drugą liczbę")
+# print(f"Wynik działania {a} + {b} = {a + float(b)}")
+# Podaj pierwszą liczbę5
+# Podaj drugą liczbę6.7
+# Wynik działania 5 + 6.7 = 11.7
+
+# napisac aplikacje słownik pol -> ang
+pol_ang = {'pies': 'dog', 'kot': "cat", "dach": "roof"}
+print("Dostępne słówka", pol_ang.keys())
+odp = input("Podaj słowo do przetłumaczenia")
+# print(pol_ang[odp.strip().lower()])
+print(pol_ang.get(odp.strip().casefold()))
+#  """ Return a version of the string suitable for caseless comparisons. """
+# ẞ -> ss
+print("GROSS".casefold() == "Groẞ".casefold())  # True
+print("GROSS".lower() == "Groẞ".lower())  # False
