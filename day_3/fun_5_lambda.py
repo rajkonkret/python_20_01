@@ -35,7 +35,7 @@ print(lista_wyn_f)  # [2, 4, 6, 10, 20, 40, 100, 400, 600, 1000]
 
 # funkcje wyższego rzędu
 # map() - bierze element, wykonuje na nim zadanie zadane funkcją
-print(f"Użycie map() {list(map(zmien, lista))}") # zmien zawiera adres funkcji a nie wynik działania funkcji!!!
+print(f"Użycie map() {list(map(zmien, lista))}")  # zmien zawiera adres funkcji a nie wynik działania funkcji!!!
 # Użycie map() [2, 4, 6, 10, 20, 40, 100, 400, 600, 1000]
 # moze byc wykonana w mmiejscu deklaracji
 # uzyta jako funkcja anonimowa - bez nazwy
@@ -45,3 +45,21 @@ print(f"Użycie map() {list(map(lambda x: x * 8, lista))}")
 # Użycie map() [2, 4, 6, 10, 20, 40, 100, 400, 600, 1000]
 # Użycie map() [4, 8, 12, 20, 40, 80, 200, 800, 1200, 2000]
 # Użycie map() [8, 16, 24, 40, 80, 160, 400, 1600, 2400, 4000]
+
+# filtrowanie danych - zwraca elelemnty spełniające warunek
+l3 = []
+for i in lista:
+    if i < 20:
+        l3.append(i)
+print(l3)  # [1, 2, 3, 5, 10]
+
+# filter()
+print(f"Zastowaie filter() {list(filter(lambda x: x < 20, lista))}")
+# Zastowaie filter() [1, 2, 3, 5, 10]
+print(f"Zastowaie filter() {list(filter(lambda x: x > 3 and x < 100, lista))}")  # to jest to samo:  3 < x < 100
+print(f"Zastowaie filter() {list(filter(lambda x: 3 < x < 100, lista))}")
+print(f"Zastowaie filter() {list(filter(lambda x: x > 120, lista))}")
+# Zastowaie filter() [1, 2, 3, 5, 10]
+# Zastowaie filter() [5, 10, 20, 50]
+# Zastowaie filter() [5, 10, 20, 50]
+# Zastowaie filter() [200, 300, 500]
