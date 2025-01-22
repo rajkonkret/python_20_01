@@ -33,6 +33,6 @@ products = [
 
 fields_discount = [i for i in products[0]]  # lista kluczy ze słownika
 with open(filename, "w", newline="") as file:
-    csvwriter = csv.DictWriter(file, fieldnames=fields_discount)
+    csvwriter = csv.DictWriter(file, fieldnames=fields_discount, delimiter=";")
     csvwriter.writeheader()  # zapis nazw kolumn
     csvwriter.writerows(products)  # writerows
