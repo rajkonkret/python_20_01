@@ -122,3 +122,7 @@ https://pl.altapps.net/soft/hackerrank-com
 
 pip freeze > requirements.txt
 pip install -r .\requirements.txt
+
+budowanie exe:
+pip install pyinstaller
+pyinstaller.exe --onefile --noconsole .\day_3\okno2_srednia_ocen.py
