@@ -68,9 +68,13 @@ print(f"Zastowaie filter() {list(filter(lambda x: x > 120, lista))}")
 print("Zastowaie filter")
 print(f"Zastowaie filter() {list(filter(lambda x: x % 2 == 0, lista))}")  # parzyste
 print(f"Zastowaie filter() {list(filter(lambda x: x % 3 == 0, lista))}")  # wielokrotnosci 3
+
+
 # stworz funkcje dodaj
 def dodaj(a, b):
     return a + b
+
+
 # stworz funkcje oblicz_vat
 def oblicz_vat(cena, vat):
     return cena + (cena * vat / 100)
