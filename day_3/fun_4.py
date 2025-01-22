@@ -1,6 +1,8 @@
 def all_args(*args, **kwargs):
     print(f"{args=}")
     print(f"{kwargs=}")
+    if "name" in kwargs.keys():
+        print(kwargs['name']) # Radek
 
 
 all_args()
